@@ -1,0 +1,47 @@
+@use "variables";
+
+.questions-answers {
+  display: flex;
+  background-color: variables.$white;
+  margin: 96px 80px;
+  padding: 96px 64px;
+  justify-content: space-between;
+  align-items: center;
+  .title {
+    max-width: 360px;
+    h2 {
+      font-size: 48px;
+      line-height: 50.4px;
+    }
+  }
+  .items {
+    margin: 0;
+    .item {
+      display: flex;
+      flex-direction: column;
+
+      .question {
+        display: flex;
+        justify-content: space-between;
+        border-bottom: 1px solid variables.$form-white;
+      }
+      .arrow {
+        border: none;
+        background-color: transparent;
+      }
+      .answer {
+        display: none;
+      }
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .questions-answers {
+    flex-direction: column;
+    margin: 16px 10px;
+    padding: 20px 15px;
+    .title {
+      width: 100%;
+    }
+  }
+}

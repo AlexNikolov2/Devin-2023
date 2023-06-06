@@ -1,0 +1,53 @@
+@use "variables";
+
+.reviews-wrap {
+  padding: 0 80px;
+  margin-bottom: 211px;
+
+  .reviews {
+    display: flex;
+    gap: 32px;
+    p {
+      margin: 5px 0px;
+    }
+    .review {
+      border-radius: 32px;
+      max-width: 519px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      > img {
+        object-fit: scale-down;
+        margin-bottom: 32px;
+      }
+      p {
+        font-size: 21px;
+      }
+      gap: 0px;
+      background-color: variables.$white;
+      padding: 48px 32px 76px 32px;
+      .name {
+        display: flex;
+        gap: 5px;
+        align-items: center;
+      }
+    }
+  }
+  .title {
+    margin-bottom: 80px;
+    h2 {
+      font-size: 48px;
+      margin: 10px 0px;
+    }
+  }
+}
+@media screen and (max-width: 1024px) {
+  .reviews-wrap {
+    align-items: center;
+    justify-content: center;
+    padding: 0 15px;
+    .reviews {
+      flex-direction: column;
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.vectors {
+  .vector-2 {
+    position: absolute;
+    width: 548.21px;
+    height: 540.06px;
+    left: -4.21px;
+    top: 141px;
+    z-index: -1;
+  }
+  .vector-3 {
+    position: absolute;
+    width: 576px;
+    height: 567.44px;
+    left: 940px;
+    top: 2532px;
+    z-index: -1;
+  }
+}
+
+@media screen and (max-width: 1430px) {
+  .vectors {
+    display: none;
+  }
+}

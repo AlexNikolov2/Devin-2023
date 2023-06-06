@@ -1,0 +1,69 @@
+@use "variables";
+
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 80px;
+  nav {
+    display: flex;
+    align-items: center;
+    .hamburger {
+      display: none;
+    }
+    ul {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+      a {
+        font-weight: bold;
+        text-decoration: none;
+        color: #000;
+        transition: color 0.4s, font-size 0.4s;
+      }
+      a:hover {
+        color: variables.$blue;
+        font-size: 20px;
+      }
+    }
+  }
+
+  button {
+    border: 1px solid variables.$blue;
+    background-color: variables.$white;
+    display: flex;
+    align-items: center;
+    padding: 16px 32px;
+    gap: 10px;
+    font-family: variables.$inter;
+    font-size: 16px;
+    font-weight: bold;
+    color: variables.$blue;
+    border-radius: 32px;
+    transition: background-color 0.5s, color 0.5s;
+  }
+  button:hover {
+    color: variables.$white;
+    background-color: variables.$blue;
+  }
+}
+@media screen and (max-width: 768px) {
+  header {
+    nav {
+      ul {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+        img {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    button {
+      display: none;
+    }
+  }
+}

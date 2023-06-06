@@ -1,0 +1,73 @@
+@use "variables";
+
+.advantages {
+  max-width: 1280px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 96px 80px 55px 80px;
+  gap: 32px;
+  .item {
+    max-width: 405px;
+    padding: 64px 40px 48px 40px;
+    background-color: variables.$white;
+    border-radius: 32px;
+    button {
+      padding: 13px 73.5px 13px 73.5px;
+      border: 1px solid variables.$blue;
+      background-color: variables.$white;
+      border-radius: 32px;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: variables.$blue;
+      font-weight: bold;
+      font-family: variables.$inter;
+      margin-top: 48px;
+      margin-bottom: 25px;
+      transition: color 0.4s, background-color 0.4s;
+    }
+    button:hover {
+      background-color: variables.$blue;
+      color: variables.$white;
+    }
+    h3 {
+      font-size: 24px;
+      transition: 0.4s;
+    }
+    h3:hover {
+      font-size: 28px;
+    }
+    p {
+      line-height: 25.6px;
+      font-size: 16px;
+    }
+  }
+}
+#title-item {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0px;
+  h2 {
+    font-size: 48px;
+    line-height: 50.4px;
+    margin: 0px;
+    letter-spacing: -0.03em;
+  }
+  img {
+    margin: 20px 0px;
+  }
+  button {
+    img {
+      margin: 0px;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .advantages {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}

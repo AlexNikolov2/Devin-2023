@@ -1,0 +1,24 @@
+@use "variables";
+
+footer {
+  background-color: variables.$white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  img {
+    margin: 48px 0px;
+  }
+  .footer-items {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 48px;
+  }
+}
+@media screen and (max-width: 850px) {
+  footer {
+    .footer-items {
+      flex-direction: column;
+    }
+  }
+}

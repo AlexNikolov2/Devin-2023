@@ -1,0 +1,59 @@
+@use "variables";
+
+.how-it-works {
+  background-color: variables.$green;
+  padding: 96px 250px 96px 190px;
+  .title {
+    h2 {
+      color: variables.$white;
+      font-size: 48px;
+      letter-spacing: -0.03em;
+      margin: 10px 0px;
+    }
+  }
+  .works-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    padding-top: 61px;
+
+    .works-item {
+      background-color: variables.$white;
+
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      border-radius: 32px;
+      .number {
+        color: variables.$yellow;
+        font-size: 90px;
+        font-weight: 200;
+      }
+      .text {
+        font-size: 21px;
+      }
+    }
+  }
+  .works-item:nth-child(even) {
+    max-width: 850px;
+    padding: 48px 302px 48px 32px;
+  }
+  .works-item:nth-child(odd) {
+    max-width: 1000px;
+    padding: 48px 459px 48px 32px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .how-it-works {
+    padding: 96px 10px;
+    .works-item:nth-child(even) {
+      max-width: 100%;
+      padding: 10px;
+    }
+    .works-item:nth-child(odd) {
+      max-width: 100%;
+      padding: 10px;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@use "variables";
+
+.form {
+  z-index: 1;
+  border-radius: 32px;
+  box-sizing: border-box;
+  background-color: variables.$blue;
+  max-width: 1000px;
+  padding: 96px 220px;
+  margin: auto;
+  color: variables.$form-white;
+  .title {
+    text-align: center;
+    h2 {
+      font-size: 48px;
+      color: variables.$white;
+      margin: 0px;
+    }
+    p {
+      color: variables.$form-white;
+    }
+  }
+  form {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 17.4px;
+    border-radius: 32px;
+    .data {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      input {
+        max-width: 560px;
+      }
+    }
+    .time {
+      display: flex;
+      gap: 15px;
+      input {
+        max-width: 177px;
+      }
+    }
+    input {
+      box-sizing: border-box;
+      border: none;
+      padding: 16px;
+    }
+    button {
+      align-self: center;
+      padding: 16px 32px;
+      border: 1px solid variables.$blue;
+      background-color: variables.$white;
+      border-radius: 32px;
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      color: variables.$blue;
+      font-weight: bold;
+      font-family: variables.$inter;
+      max-width: 235px;
+      transition: font-size 0.4s;
+    }
+    button:hover {
+      font-size: 25px;
+    }
+    .woman {
+      display: flex;
+      position: absolute;
+      width: 197.08px;
+      height: 540px;
+      left: -335.04px;
+      top: -153.05px;
+    }
+    .man {
+      display: flex;
+      position: absolute;
+      width: 209.91px;
+      height: 643.49px;
+      left: 638.61px;
+      top: -60px;
+    }
+  }
+}
+.sharka {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  top: 4016px;
+}
+
+.big-pink-text {
+  margin: 129px 142.5px 164px 142.5px;
+  width: fit-content;
+  .text {
+    letter-spacing: -0.022em;
+    font-size: 105px;
+    margin: 0;
+    color: variables.$pink;
+    font-weight: 700;
+    #stroked {
+      color: #f3f4f6;
+      text-shadow: -1px -1px 0 variables.$pink, 1px -1px 0 variables.$pink,
+        -1px 1px 0 variables.$pink, 1px 1px 0 variables.$pink;
+    }
+  }
+}
+
+@media screen and (max-width: 1330px) {
+  .form {
+    form {
+      .woman,
+      .man {
+        display: none;
+      }
+      .data {
+        max-width: 400px;
+      }
+      .time {
+        flex-direction: column;
+      }
+    }
+  }
+
+  .sharka {
+    display: none;
+  }
+  .big-pink-text {
+    margin: 0px;
+    font-size: 72px;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .form {
+    padding: 96px 50px;
+    margin: 30px;
+    form {
+      .time {
+        input {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+  .big-pink-text {
+    display: none;
+  }
+}

@@ -1,0 +1,33 @@
+@use "variables";
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+body {
+  margin: 0;
+  background-color: #f3f4f6;
+}
+* {
+  font-family: variables.$manrope;
+  box-sizing: border-box;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p {
+  font-family: variables.$manrope;
+  color: variables.$black;
+  letter-spacing: -0.03em;
+}
+
+a {
+  text-decoration: none;
+}
+button:hover {
+  cursor: pointer;
+}
